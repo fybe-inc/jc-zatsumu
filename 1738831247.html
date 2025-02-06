@@ -1,0 +1,10076 @@
+<html lang="ja"><head>
+<title>ハローワークインターネットサービス - 求人情報検索・一覧</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=0.5,user-scalable=yes,initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="jsp/css/reset.css">
+<link rel="stylesheet" href="jsp/css/buttons_green.css">
+<link rel="stylesheet" href="jsp/css/table_green.css">
+<link rel="stylesheet" href="jsp/css/navbar_green.css">
+<link rel="stylesheet" href="jsp/css/page.css">
+<link rel="stylesheet" href="jsp/css/progress_green.css">
+<link rel="stylesheet" href="jsp/css/common_green.css">
+<link rel="stylesheet" href="jsp/css/jquery-ui.css">
+<link rel="stylesheet" href="jsp/font-awesome-4.7.0/css/font-awesome.min.css">
+
+
+		<link rel="stylesheet" type="text/css" href="jsp/css/ECZ250/ECZ250.css">
+	</head>
+
+	
+	<body onload="init();">
+
+
+		<div id="all">
+
+			<header id="top_header" class="is_fixed">
+
+				
+<div id="header" class="flex align_center last_right nowrap ml2p">
+	<a href="https://www.hellowork.mhlw.go.jp/index.html">
+		<img class="top_image_min769" src="jsp/img/logo_big.gif">
+		<img class="top_image_max768" src="jsp/img/logo_small.gif">
+	</a>
+	<div class="flex jus_end align_center">
+		<script type="text/javascript" src="jsp/js/ewbc.min.js"></script>
+		<a href="javascript:void(0);" id="pt_enable">
+			<img class="img_small" src="jsp/img/yasashii.gif" alt="やさしいブラウザ・クラウド版はこちらからご利用ください" title="やさしいブラウザ">
+		</a>
+		<a href="https://www.mhlw.go.jp/index.html" target="_blank">
+			<img class="img_small ml05" src="jsp/img/mhlwlogo.gif" alt="厚生労働省Webサイトはこちら" title="厚生労働省">
+		</a>
+		<div style="min-width:40px"></div>
+	</div>
+</div>
+				<div id="breadcrumbs" class="m_side5p"><span>
+
+					<a href="https://www.hellowork.mhlw.go.jp/index.html">トップ&nbsp;</a>
+
+					&nbsp;&gt;&nbsp;求人検索&nbsp;
+
+				</span></div>
+
+			</header><p class="pagebottom"><a href="#bottom">ページ<br>最下部へ<br><i class="fa fa-2x fa-chevron-down"></i></a></p>
+
+			
+			<div id="container" style="padding-top: 88px;">
+
+				<div class="page_title">求人情報検索・一覧</div><hr class="media_nodisp">
+
+				<div class="media_nodisp_pc">
+					<hr>
+
+				</div>
+				
+				
+				<form name="form_1" id="ID_form_1" method="post" action="GECA110010.do" novalidate="novalidate">
+<input type="text" style="position:absolute;visibility:hidden" disabled="">
+
+				
+					
+						<div class="fs08 mb05">
+							<div class="mb05">
+								<a id="ID_kyujinLink" class="mb05" href="https://www.hellowork.mhlw.go.jp/member/job_offer_search01.html" target="_blank">
+											求人情報検索のしかた（簡単な検索方法）
+</a>
+							</div>
+							<div class="mb05">希望する条件を入力して【検索】ボタンを押してください。</div>
+
+							<div class="mb05">さらに詳しい検索条件を入力する場合、【詳細検索条件】ボタンを押してください。</div>
+
+							<div class="mb05">詳細検索条件を含めて検索条件をクリアする場合、【検索条件をクリア】ボタンを押してください。</div>
+
+						</div>
+						
+						<div class="flex flex_bottom jus_end ">
+							<div class="flex align_center last_right" name="iNFTeikyoRiyoDantaiIDLabel" id="ID_iNFTeikyoRiyoDantaiIDLabel">情報提供利用団体ＩＤが設定できます。</div>
+
+							<input class="button modal_open button" id="ID_infTkRiyoDantaiBtn" name="infTkRiyoDantaiBtn" type="button" value="情報提供利用団体ＩＤを設定">
+
+						</div>
+						<br>
+						<table id="ID_sub_table" class="normal mb1">
+
+							<tbody><tr>
+
+								<th scope="row">
+									<div>
+										【ハローワークに求職登録している方】
+										<br><br>
+										求職番号
+										<div class="fs08 mt1">
+											<a id="ID_kyujinLink" href="https://www.hellowork.mhlw.go.jp/member/mem_service02.html" target="_blank">
+												事業所名等の公開について
+											</a>
+										</div>
+									</div>
+								<span class="nes_label nes1 any">任意</span></th><td class="nes2"><span class="nes_label any">任意</span></td>
+								<td>
+									<div class="flex input">
+										<div>
+											<div class="fs08 ml05 mb05">
+												ハローワーク受付票に記載されている求職番号を入力してください。
+											</div>
+											<span class="restrict">半角数字5桁-8桁以内</span><div id="ID_msgKSNo" name="msgKSNo" class="flex input align_center mb03">
+												<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_5em" id="ID_kSNoJo" name="kSNoJo" maxlength="5" value=""></div></div>
+
+												<div class="ta_left">-</div>
+												<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_8em" id="ID_kSNoGe" name="kSNoGe" maxlength="8" value=""></div></div>
+
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+						</tbody></table>
+
+						
+						<div class="fs1_5">
+							<div>基本検索条件</div>
+
+						</div>
+						<table class="normal mb1">
+
+							
+
+
+
+
+
+	<tbody><tr>
+
+		<th scope="row">求人区分<span class="nes_label nes1 nes">必須</span></th><td class="nes2"><span class="nes_label nes">必須</span></td>
+		<td class="iew">
+			<div id="ID_kjKbnRadioBtn" name="kjKbnRadioBtn" class="flex input align_center mb03">
+				<div>
+					<div class="flex align_center mb05">
+						<div class="radio"><label id="ID_LkjKbnRadioBtn1" for="ID_kjKbnRadioBtn1"><input type="radio" id="ID_kjKbnRadioBtn1" name="kjKbnRadioBtn" value="1" checked="">一般求人</label></div>
+
+						<div id="ID_ippanCKBox" name="ippanCKBox" class="flex input align_center mb03">
+							<div>［</div>
+
+							<div class="checkbox"><label id="ID_LippanCKBox1" for="ID_ippanCKBox1"><input type="checkbox" id="ID_ippanCKBox1" name="ippanCKBox" value="1" checked="">フルタイム</label></div>
+
+							<div class="checkbox"><label id="ID_LippanCKBox2" for="ID_ippanCKBox2"><input type="checkbox" id="ID_ippanCKBox2" name="ippanCKBox" value="2" checked="">パート</label></div>
+
+							<div>］</div>
+
+						</div>
+					</div>
+					<div class="flex align_center">
+						<div class="mr1 mb05"><div class="radio"><label id="ID_LkjKbnRadioBtn2" for="ID_kjKbnRadioBtn2"><input type="radio" id="ID_kjKbnRadioBtn2" name="kjKbnRadioBtn" value="2">新卒・既卒求人</label></div>
+</div>
+						<div class="mr1 mb05"><div class="radio"><label id="ID_LkjKbnRadioBtn3" for="ID_kjKbnRadioBtn3"><input type="radio" id="ID_kjKbnRadioBtn3" name="kjKbnRadioBtn" value="3">季節求人</label></div>
+</div>
+						<div class="mr1 mb05"><div class="radio"><label id="ID_LkjKbnRadioBtn4" for="ID_kjKbnRadioBtn4"><input type="radio" id="ID_kjKbnRadioBtn4" name="kjKbnRadioBtn" value="4">出稼ぎ求人</label></div>
+</div>
+					</div>
+					<div class="flex align_center">
+						<div class="radio"><label id="ID_LkjKbnRadioBtn5" for="ID_kjKbnRadioBtn5"><input type="radio" id="ID_kjKbnRadioBtn5" name="kjKbnRadioBtn" value="5">障害のある方のための求人</label></div>
+
+						<div id="ID_sGSYACKBox" name="sGSYACKBox" class="flex input align_center mb03">
+							<div>［</div>
+
+							<div class="checkbox"><label id="ID_LsGSYACKBox1" for="ID_sGSYACKBox1"><input type="checkbox" id="ID_sGSYACKBox1" name="sGSYACKBox" value="1" disabled="">フルタイム</label></div>
+
+							<div class="checkbox"><label id="ID_LsGSYACKBox2" for="ID_sGSYACKBox2"><input type="checkbox" id="ID_sGSYACKBox2" name="sGSYACKBox" value="2" disabled="">パート</label></div>
+
+							<div>］</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<th scope="row">年齢<span class="nes_label nes1 any">任意</span></th><td class="nes2"><span class="nes_label any">任意</span></td>
+		<td class="iew">
+			<div class="fs08 mb05">【求人区分】で「新卒・既卒求人」以外を選択した場合のみ、検索条件に設定できます。</div>
+			<div>
+				<span class="restrict">半角数字</span>
+
+			</div>
+			<div class="input">
+				<div id="ID_msgNenrei" name="msgNenrei" class="flex input align_center mb03">
+					<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="talign-right in_width_4em" id="ID_nenreiInput" name="nenreiInput" maxlength="2" value=""></div></div>
+
+					<div class="mt2">歳</div>
+				</div>
+			</div>
+			<div class="flex checks">
+				<div id="ID_nenreiCKBox" name="nenreiCKBox" class="flex input align_center mb03">
+					<div class="checkbox"><label id="ID_LnenreiCKBox1" for="ID_nenreiCKBox1"><input type="checkbox" id="ID_nenreiCKBox1" name="nenreiCKBox" value="1">不問のみ</label></div>
+
+					<div class="checkbox"><label id="ID_LnenreiCKBox2" for="ID_nenreiCKBox2"><input type="checkbox" id="ID_nenreiCKBox2" name="nenreiCKBox" value="2">不問をのぞく</label></div>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<th scope="row">就業場所<span class="nes_label nes1 any">任意</span></th><td class="nes2"><span class="nes_label any">任意</span></td>
+		<td class="iew">
+			<div class="fs08 mb05">就業場所を「埼玉県、千葉県、東京都、神奈川県、岐阜県、静岡県、愛知県、三重県、滋賀県、京都府、大阪府、兵庫県、奈良県、和歌山県」に設定した場合、 詳細検索条件で沿線を指定して検索することができます。</div>
+			<div class="flex align_center">
+				<div class="m03"><div class="fb">都道府県<span class="restrict"></span></div><div><select id="ID_tDFK1CmbBox" name="tDFK1CmbBox">
+<option value="" selected=""></option>
+<option value="01">北海道</option>
+<option value="02">青森県</option>
+<option value="03">岩手県</option>
+<option value="04">宮城県</option>
+<option value="05">秋田県</option>
+<option value="06">山形県</option>
+<option value="07">福島県</option>
+<option value="08">茨城県</option>
+<option value="09">栃木県</option>
+<option value="10">群馬県</option>
+<option value="11">埼玉県</option>
+<option value="12">千葉県</option>
+<option value="13">東京都</option>
+<option value="14">神奈川県</option>
+<option value="15">新潟県</option>
+<option value="16">富山県</option>
+<option value="17">石川県</option>
+<option value="18">福井県</option>
+<option value="19">山梨県</option>
+<option value="20">長野県</option>
+<option value="21">岐阜県</option>
+<option value="22">静岡県</option>
+<option value="23">愛知県</option>
+<option value="24">三重県</option>
+<option value="25">滋賀県</option>
+<option value="26">京都府</option>
+<option value="27">大阪府</option>
+<option value="28">兵庫県</option>
+<option value="29">奈良県</option>
+<option value="30">和歌山県</option>
+<option value="31">鳥取県</option>
+<option value="32">島根県</option>
+<option value="33">岡山県</option>
+<option value="34">広島県</option>
+<option value="35">山口県</option>
+<option value="36">徳島県</option>
+<option value="37">香川県</option>
+<option value="38">愛媛県</option>
+<option value="39">高知県</option>
+<option value="40">福岡県</option>
+<option value="41">佐賀県</option>
+<option value="42">長崎県</option>
+<option value="43">熊本県</option>
+<option value="44">大分県</option>
+<option value="45">宮崎県</option>
+<option value="46">鹿児島県</option>
+<option value="47">沖縄県</option>
+<option value="59">海外</option>
+</select></div>
+</div>
+
+				<div class="ml1">
+					<div class="mt03">市区町村</div>
+					<div class="align_center">
+						<input type="button" class="button" id="ID_Btn" name="Btn" onclick="openCodeAssist('5','9','siku1Hidden','tDFK_Uchi1Label','1','','-1','','tDFK1CmbBox','');" value="選択">
+
+						<a id="ID_tdfk1ClearBtn" class="button" href="javascript:void(0);">クリア</a>
+					</div>
+				</div>
+				<div class="ml1 mt1">
+					<div class="assist_area nowrap" name="tDFK_Uchi1Label" id="ID_tDFK_Uchi1Label">&nbsp;</div>
+
+				</div>
+			</div>
+			<hr>
+
+			<div class="flex align_center">
+				<div class="m03"><div class="fb">都道府県<span class="restrict"></span></div><div><select id="ID_tDFK2CmbBox" name="tDFK2CmbBox">
+<option value="" selected=""></option>
+<option value="01">北海道</option>
+<option value="02">青森県</option>
+<option value="03">岩手県</option>
+<option value="04">宮城県</option>
+<option value="05">秋田県</option>
+<option value="06">山形県</option>
+<option value="07">福島県</option>
+<option value="08">茨城県</option>
+<option value="09">栃木県</option>
+<option value="10">群馬県</option>
+<option value="11">埼玉県</option>
+<option value="12">千葉県</option>
+<option value="13">東京都</option>
+<option value="14">神奈川県</option>
+<option value="15">新潟県</option>
+<option value="16">富山県</option>
+<option value="17">石川県</option>
+<option value="18">福井県</option>
+<option value="19">山梨県</option>
+<option value="20">長野県</option>
+<option value="21">岐阜県</option>
+<option value="22">静岡県</option>
+<option value="23">愛知県</option>
+<option value="24">三重県</option>
+<option value="25">滋賀県</option>
+<option value="26">京都府</option>
+<option value="27">大阪府</option>
+<option value="28">兵庫県</option>
+<option value="29">奈良県</option>
+<option value="30">和歌山県</option>
+<option value="31">鳥取県</option>
+<option value="32">島根県</option>
+<option value="33">岡山県</option>
+<option value="34">広島県</option>
+<option value="35">山口県</option>
+<option value="36">徳島県</option>
+<option value="37">香川県</option>
+<option value="38">愛媛県</option>
+<option value="39">高知県</option>
+<option value="40">福岡県</option>
+<option value="41">佐賀県</option>
+<option value="42">長崎県</option>
+<option value="43">熊本県</option>
+<option value="44">大分県</option>
+<option value="45">宮崎県</option>
+<option value="46">鹿児島県</option>
+<option value="47">沖縄県</option>
+<option value="59">海外</option>
+</select></div>
+</div>
+
+				<div class="ml1">
+					<div class="mt03">市区町村</div>
+					<div class="align_center">
+						<input type="button" class="button" id="ID_Btn" name="Btn" onclick="openCodeAssist('5','9','siku2Hidden','tDFK_Uchi2Label','1','','-1','','tDFK2CmbBox','');" value="選択">
+
+						<a id="ID_tdfk2ClearBtn" class="button" href="javascript:void(0);">クリア</a>
+					</div>
+				</div>
+				<div class="ml1 mt1">
+					<div class="assist_area nowrap" name="tDFK_Uchi2Label" id="ID_tDFK_Uchi2Label">&nbsp;</div>
+
+				</div>
+			</div>
+			<hr>
+
+			<div class="flex align_center">
+				<div class="m03"><div class="fb">都道府県<span class="restrict"></span></div><div><select id="ID_tDFK3CmbBox" name="tDFK3CmbBox">
+<option value="" selected=""></option>
+<option value="01">北海道</option>
+<option value="02">青森県</option>
+<option value="03">岩手県</option>
+<option value="04">宮城県</option>
+<option value="05">秋田県</option>
+<option value="06">山形県</option>
+<option value="07">福島県</option>
+<option value="08">茨城県</option>
+<option value="09">栃木県</option>
+<option value="10">群馬県</option>
+<option value="11">埼玉県</option>
+<option value="12">千葉県</option>
+<option value="13">東京都</option>
+<option value="14">神奈川県</option>
+<option value="15">新潟県</option>
+<option value="16">富山県</option>
+<option value="17">石川県</option>
+<option value="18">福井県</option>
+<option value="19">山梨県</option>
+<option value="20">長野県</option>
+<option value="21">岐阜県</option>
+<option value="22">静岡県</option>
+<option value="23">愛知県</option>
+<option value="24">三重県</option>
+<option value="25">滋賀県</option>
+<option value="26">京都府</option>
+<option value="27">大阪府</option>
+<option value="28">兵庫県</option>
+<option value="29">奈良県</option>
+<option value="30">和歌山県</option>
+<option value="31">鳥取県</option>
+<option value="32">島根県</option>
+<option value="33">岡山県</option>
+<option value="34">広島県</option>
+<option value="35">山口県</option>
+<option value="36">徳島県</option>
+<option value="37">香川県</option>
+<option value="38">愛媛県</option>
+<option value="39">高知県</option>
+<option value="40">福岡県</option>
+<option value="41">佐賀県</option>
+<option value="42">長崎県</option>
+<option value="43">熊本県</option>
+<option value="44">大分県</option>
+<option value="45">宮崎県</option>
+<option value="46">鹿児島県</option>
+<option value="47">沖縄県</option>
+<option value="59">海外</option>
+</select></div>
+</div>
+
+				<div class="ml1">
+					<div class="mt03">市区町村</div>
+					<div class="align_center">
+						<input type="button" class="button" id="ID_Btn" name="Btn" onclick="openCodeAssist('5','9','siku3Hidden','tDFK_Uchi3Label','1','','-1','','tDFK3CmbBox','');" value="選択">
+
+						<a id="ID_tdfk3ClearBtn" class="button" href="javascript:void(0);">クリア</a>
+					</div>
+				</div>
+				<div class="ml1 mt1">
+					<div class="assist_area nowrap" name="tDFK_Uchi3Label" id="ID_tDFK_Uchi3Label">&nbsp;</div>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<th scope="row">希望する職種<span class="nes_label nes1 any">任意</span></th><td class="nes2"><span class="nes_label any">任意</span></td>
+		<td class="iew">
+			<div class="fs08 mb05">
+				【職種を選択】又は【職業分類を選択】ボタンを押して、検索する職種を選択してください。職業分類コードを直接入力することもできます
+				<a id="ID_kyujinLink" href="https://www.hellowork.mhlw.go.jp/info/mhlw_job_dictionary.html" target="_blank">(職業分類コード一覧)</a>
+				。
+			</div>
+			<div class="flex align_center mt05">
+				<div>
+					<button type="button" class="button" id="ID_Btn" name="Btn" onclick="openShokushuAssist('3','kiboSuruSKSU1Hidden','kiboSuruSKSU1Label');">職種を選択</button>
+
+				</div>
+				<div class="ml1">
+					<a id="ID_sksu1ClearBtn" class="button" href="javascript:void(0);">クリア</a>
+				</div>
+				<div>
+					<div class="ml1" name="kiboSuruSKSU1Label" id="ID_kiboSuruSKSU1Label">&nbsp;</div>
+
+				</div>
+			</div>
+			<div class="flex align_center mt05">
+				<div>
+					<button type="button" class="button" id="ID_Btn" name="Btn" onclick="openShokushuAssist('3','kiboSuruSKSU2Hidden','kiboSuruSKSU2Label');">職種を選択</button>
+
+				</div>
+				<div class="ml1">
+					<a id="ID_sksu2ClearBtn" class="button" href="javascript:void(0);">クリア</a>
+				</div>
+				<div>
+					<div class="ml1" name="kiboSuruSKSU2Label" id="ID_kiboSuruSKSU2Label">&nbsp;</div>
+
+				</div>
+			</div>
+			<div class="flex align_center mt05">
+				<div>
+					<button type="button" class="button" id="ID_Btn" name="Btn" onclick="openShokushuAssist('3','kiboSuruSKSU3Hidden','kiboSuruSKSU3Label');">職種を選択</button>
+
+				</div>
+				<div class="ml1">
+					<a id="ID_sksu3ClearBtn" class="button" href="javascript:void(0);">クリア</a>
+				</div>
+				<div>
+					<div class="ml1" name="kiboSuruSKSU3Label" id="ID_kiboSuruSKSU3Label">&nbsp;</div>
+
+				</div>
+			</div>
+			<hr>
+
+			<div id="ID_msgSKGYBRUI1" name="msgSKGYBRUI1" class="flex input align_center mb03">
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_5em" id="ID_sKGYBRUIJo1" name="sKGYBRUIJo1" maxlength="3" value=""></div></div>
+-
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_4em" id="ID_sKGYBRUIGe1" name="sKGYBRUIGe1" maxlength="2" value=""></div></div>
+
+				<div class="flex Button">
+					<button type="button" class="button" id="ID_Btn" name="Btn" onclick="openShokubunAssist('3','sKGYBRUIJo1,sKGYBRUIGe1','sKGYBRUI1Label','1,4','2');">職業分類を選択</button>
+
+				</div>
+				<div class="ml1" name="sKGYBRUI1Label" id="ID_sKGYBRUI1Label">&nbsp;</div>
+
+			</div>
+			<div id="ID_msgSKGYBRUI2" name="msgSKGYBRUI2" class="flex input align_center mb03">
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_5em" id="ID_sKGYBRUIJo2" name="sKGYBRUIJo2" maxlength="3" value=""></div></div>
+-
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_4em" id="ID_sKGYBRUIGe2" name="sKGYBRUIGe2" maxlength="2" value=""></div></div>
+
+				<div class="flex Button">
+					<button type="button" class="button" id="ID_Btn" name="Btn" onclick="openShokubunAssist('3','sKGYBRUIJo2,sKGYBRUIGe2','sKGYBRUI2Label','1,4','2');">職業分類を選択</button>
+
+				</div>
+				<div class="ml1" name="sKGYBRUI2Label" id="ID_sKGYBRUI2Label">&nbsp;</div>
+
+			</div>
+			<div id="ID_msgSKGYBRUI3" name="msgSKGYBRUI3" class="flex input align_center mb03">
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_5em" id="ID_sKGYBRUIJo3" name="sKGYBRUIJo3" maxlength="3" value=""></div></div>
+-
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="in_width_4em" id="ID_sKGYBRUIGe3" name="sKGYBRUIGe3" maxlength="2" value=""></div></div>
+
+				<div class="flex Button">
+					<button type="button" class="button" id="ID_Btn" name="Btn" onclick="openShokubunAssist('3','sKGYBRUIJo3,sKGYBRUIGe3','sKGYBRUI3Label','1,4','2');">職業分類を選択</button>
+
+				</div>
+				<div class="ml1" name="sKGYBRUI3Label" id="ID_sKGYBRUI3Label">&nbsp;</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<th scope="row">雇用形態<span class="nes_label nes1 any">任意</span></th><td class="nes2"><span class="nes_label any">任意</span></td>
+		<td class="iew">
+			<div class="fs08 mb05">
+				【求人区分】で「一般求人（フルタイム）」、「障害のある方のための求人（フルタイム）」、「新卒・既卒求人」、 「季節求人」、「出稼ぎ求人」を選択した場合のみ、検索条件に設定できます。
+			</div>
+			<div class="flex input">
+				<div id="ID_koyoFltmCKBox" name="koyoFltmCKBox" class="flex input align_center mb03">
+					<div class="checkbox"><label id="ID_LkoyoFltmCKBox1" for="ID_koyoFltmCKBox1"><input type="checkbox" id="ID_koyoFltmCKBox1" name="koyoFltmCKBox" value="1" disabled="">正社員</label></div>
+
+					<div class="checkbox"><label id="ID_LkoyoFltmCKBox2" for="ID_koyoFltmCKBox2"><input type="checkbox" id="ID_koyoFltmCKBox2" name="koyoFltmCKBox" value="2" disabled="">正社員以外</label></div>
+
+					<div class="checkbox"><label id="ID_LkoyoFltmCKBox3" for="ID_koyoFltmCKBox3"><input type="checkbox" id="ID_koyoFltmCKBox3" name="koyoFltmCKBox" value="3" disabled="">有期雇用派遣労働者</label></div>
+
+					<div class="checkbox"><label id="ID_LkoyoFltmCKBox4" for="ID_koyoFltmCKBox4"><input type="checkbox" id="ID_koyoFltmCKBox4" name="koyoFltmCKBox" value="4" disabled="">無期雇用派遣労働者</label></div>
+
+				</div>
+			</div>
+			<hr>
+
+			<div class="fs08 mb05">
+				【求人区分】で「一般求人（パート）」、「障害のある方のための求人（パート）」を選択した場合のみ、検索条件に設定できます。 
+			</div>
+			<div class="flex input">
+				<div id="ID_koyoPartCKBox" name="koyoPartCKBox" class="flex input align_center mb03">
+					<div class="checkbox"><label id="ID_LkoyoPartCKBox5" for="ID_koyoPartCKBox5"><input type="checkbox" id="ID_koyoPartCKBox5" name="koyoPartCKBox" value="5" disabled="">パート労働者</label></div>
+
+					<div class="checkbox"><label id="ID_LkoyoPartCKBox6" for="ID_koyoPartCKBox6"><input type="checkbox" id="ID_koyoPartCKBox6" name="koyoPartCKBox" value="6" disabled="">有期雇用派遣パート</label></div>
+
+					<div class="checkbox"><label id="ID_LkoyoPartCKBox7" for="ID_koyoPartCKBox7"><input type="checkbox" id="ID_koyoPartCKBox7" name="koyoPartCKBox" value="7" disabled="">無期雇用派遣パート</label></div>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<th scope="row">新着求人<span class="nes_label nes1 any">任意</span></th><td class="nes2"><span class="nes_label any">任意</span></td>
+		<td class="iew">
+			<div>
+				<div id="ID_newArrivedCKBox" name="newArrivedCKBox" class="flex input align_center mb03">
+					<div>
+						<div class="checkbox"><label id="ID_LnewArrivedCKBox1" for="ID_newArrivedCKBox1"><input type="checkbox" id="ID_newArrivedCKBox1" name="newArrivedCKBox" value="1">新着（当日・前日）の求人情報から検索</label></div>
+
+					</div>
+					<div>
+						<div class="checkbox"><label id="ID_LnewArrivedCKBox2" for="ID_newArrivedCKBox2"><input type="checkbox" id="ID_newArrivedCKBox2" name="newArrivedCKBox" value="2">新着（１週間以内）の求人情報から検索</label></div>
+
+					</div>
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<th scope="row">フリーワード<span class="nes_label nes1 any">任意</span></th><td class="nes2"><span class="nes_label any">任意</span></td>
+		<td>
+			<div class="fs08 ml05 mb05">
+				職種名、仕事の内容、必要な経験等、必要な免許・資格、事業内容等を表すキーワードを全角で入力してください。
+			</div>
+			<div class="fs08 ml05 mb05">
+				空白で区切ることにより複数キーワードを指定できます。
+			</div>
+			<div class="fs08 ml05 mb05">
+				「ＯＲ検索」を選択した場合、入力したキーワードのいずれかを含む求人を検索します。
+			</div>
+			<div class="fs08 ml05 mb05">
+				「ＡＮＤ検索」を選択した場合、入力したキーワード全てを含む求人を検索します。
+			</div>
+			<div class="fs08 ml05 mb05">
+				「ＮＯＴ検索」を利用した場合、入力したキーワードを含まない求人を検索します。
+			</div>
+			<hr>
+
+			<div id="ID_freeWordRadioBtn" name="freeWordRadioBtn" class="flex input align_center mb03 flex input align_center">
+				<div class="radio"><label id="ID_LfreeWordRadioBtn0" for="ID_freeWordRadioBtn0"><input type="radio" id="ID_freeWordRadioBtn0" name="freeWordRadioBtn" value="0" checked="">ＯＲ検索</label></div>
+
+				<div class="radio"><label id="ID_LfreeWordRadioBtn1" for="ID_freeWordRadioBtn1"><input type="radio" id="ID_freeWordRadioBtn1" name="freeWordRadioBtn" value="1">ＡＮＤ検索</label></div>
+
+			</div>
+			<div class="flex input align_center mb03 flex">
+				<div class="m03"><div class="fb"><span class="restrict nolabel ">全角50文字以内</span></div><div><input type="text" class="in_width_40em" id="ID_freeWordInput" name="freeWordInput" maxlength="50" value="外国人歓迎　Ｎ１　Ｎ２　Ｎ３　Ｎ４　Ｎ５　日本語不問　日本語レベル不問"></div></div>
+
+			</div>
+			<hr>
+
+			<div class="flex ml1">ＮＯＴ検索</div>
+			<div class="flex input align_center mb03 flex">
+				<div class="m03"><div class="fb"><span class="restrict nolabel ">全角50文字以内</span></div><div><input type="text" class="in_width_40em" id="ID_nOTKNSKFreeWordInput" name="nOTKNSKFreeWordInput" maxlength="50" value=""><span>をのぞく</span></div></div>
+
+			</div>
+		</td>
+	</tr>
+
+
+							<tr>
+
+								<td class="iew" colspan="3">
+									<div class="flex align_center jus_end">
+										<div name="searchShosaiLabel" id="ID_searchShosaiLabel">詳細検索条件が設定できます。</div>
+
+										<input class="button main in_width_11em" id="ID_searchShosaiBtn" name="searchShosaiBtn" type="button" value="詳細検索条件">
+
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+
+								<td class="iew" colspan="3">
+									<div class="flex align_center jus_end">
+										<input class="button button sub in_width_11em" id="ID_searchClearBtn" name="searchClearBtn" type="button" value="検索条件をクリア">
+
+										<input class="button main in_width_11em" id="ID_searchBtn" name="searchBtn" type="submit" value="検索">
+
+									</div>
+								</td>
+							</tr>
+
+						</tbody></table>
+
+						
+						<div class="fs1_5">
+							<div>求人番号・事業所番号を指定して検索</div>
+
+						</div>
+						<table class="normal mb1">
+
+							
+
+
+
+	<tbody><tr>
+
+		<th scope="row">求人番号<span class="nes_label nes1 any">任意</span></th><td class="nes2"><span class="nes_label any">任意</span></td>
+		<td class="iew">
+			<div class="fs08 mb05">求人番号を入力して検索する場合、他の検索条件は無効になります。</div>
+			<span class="restrict">半角数字5桁-8桁以内</span>
+			<div id="ID_msgKJNo1" name="msgKJNo1" class="flex input align_center mb03">
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_5em talign-left" id="ID_kJNoJo1" name="kJNoJo1" maxlength="5" value=""></div></div>
+
+				<div class="ta_left">-</div>
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_8em talign-left" id="ID_kJNoGe1" name="kJNoGe1" maxlength="8" value=""></div></div>
+
+			</div>
+			<div id="ID_msgKJNo2" name="msgKJNo2" class="flex input align_center mb03">
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_5em talign-left" id="ID_kJNoJo2" name="kJNoJo2" maxlength="5" value=""></div></div>
+
+				<div class="ta_left">-</div>
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_8em talign-left" id="ID_kJNoGe2" name="kJNoGe2" maxlength="8" value=""></div></div>
+
+			</div>
+			<div id="ID_msgKJNo3" name="msgKJNo3" class="flex input align_center mb03">
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_5em talign-left" id="ID_kJNoJo3" name="kJNoJo3" maxlength="5" value=""></div></div>
+
+				<div class="ta_left">-</div>
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_8em talign-left" id="ID_kJNoGe3" name="kJNoGe3" maxlength="8" value=""></div></div>
+
+			</div>
+			<div id="ID_msgKJNo4" name="msgKJNo4" class="flex input align_center mb03">
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_5em talign-left" id="ID_kJNoJo4" name="kJNoJo4" maxlength="5" value=""></div></div>
+
+				<div class="ta_left">-</div>
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_8em talign-left" id="ID_kJNoGe4" name="kJNoGe4" maxlength="8" value=""></div></div>
+
+			</div>
+			<div id="ID_msgKJNo5" name="msgKJNo5" class="flex input align_center mb03">
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_5em talign-left" id="ID_kJNoJo5" name="kJNoJo5" maxlength="5" value=""></div></div>
+
+				<div class="ta_left">-</div>
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_8em talign-left" id="ID_kJNoGe5" name="kJNoGe5" maxlength="8" value=""></div></div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<th scope="row">事業所番号<span class="nes_label nes1 any">任意</span></th><td class="nes2"><span class="nes_label any">任意</span></td>
+		<td class="iew">
+			<div class="fs08 mb05">事業所番号を入力して検索する場合、他の検索条件は無効になります。</div>
+			<span class="restrict">半角数字4桁-6桁以内-1桁</span>
+			<div id="ID_msgJGSHNo" name="msgJGSHNo" class="flex input align_center mb03">
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_5em talign-left" id="ID_jGSHNoJo" name="jGSHNoJo" maxlength="4" value=""></div></div>
+
+				<div class="ta_left">-</div>
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_6em talign-left" id="ID_jGSHNoChuu" name="jGSHNoChuu" maxlength="6" value=""></div></div>
+
+				<div class="ta_left">-</div>
+				<div class="m03"><div class="fb"><span class="restrict nolabel "></span></div><div><input type="text" class="ta_left in_width_4em talign-left" id="ID_jGSHNoGe" name="jGSHNoGe" maxlength="1" value=""></div></div>
+
+			</div>
+		</td>
+	</tr>
+
+
+							<tr>
+
+								<td class="iew" colspan="3">
+									<div class="flex align_center jus_end">
+										<input class="button button sub in_width_11em" id="ID_searchNoClearBtn" name="searchNoClearBtn" type="button" value="検索条件をクリア">
+
+										<input class="button main in_width_11em" id="ID_searchNoBtn" name="searchNoBtn" type="submit" value="番号検索">
+
+									</div>
+								</td>
+							</tr>
+
+						</tbody></table>
+
+					
+					
+					<!-- 総合的職場情報提供サイトからのリクエストの場合表示 -->
+					
+					
+					<!-- 求人件数（総合的職場情報提供サイト用Hidden項目） -->
+					<input type="hidden" id="ID_kyujinkensu" name="kyujinkensu" value="5265">
+
+					<div id="ID_summary"></div>
+					
+					<!-- 求人情報（サマリ） -->
+					
+						<div class="flex align_end last_right mt05 ">
+<div class="mr03">
+<div class="m05"><span class="fb">5265件</span>中&nbsp;31～60&nbsp;件を表示</div></div>
+
+<div class="flex align_center"><div class="mr03">
+<span class="fb">並び順</span>
+<div class="m05"><select id="ID_fwListNaviSortTop" name="fwListNaviSortTop">
+<option value="1" selected="">受付年月日順</option>
+<option value="2">紹介期限日順</option>
+</select></div></div>
+<div class="mr03">
+<span class="fb">表示件数</span>
+<div class="m05"><select id="ID_fwListNaviDispTop" name="fwListNaviDispTop">
+<option value="10">10件</option>
+<option value="30" selected="">30件</option>
+<option value="50">50件</option>
+</select></div></div>
+</div><div><ul class="flex page_navi"><li><input type="submit" name="fwListNaviBtnPrev" value="＜前へ"></li>
+<li><input type="submit" name="fwListNaviBtn1" value="1"></li><li><input type="submit" name="fwListNaviBtn2" value="2" disabled=""></li><li><input type="submit" name="fwListNaviBtn3" value="3"></li><li><input type="submit" name="fwListNaviBtn4" value="4"></li><li><input type="submit" name="fwListNaviBtn5" value="5"></li><li><input type="submit" name="fwListNaviBtn6" value="6～"></li><li><input type="submit" name="fwListNaviBtnNext" value="次へ＞"></li>
+</ul>
+</div></div>
+
+
+							
+							
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／（草加瀬崎店等）</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>埼玉県草加市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17200551</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017200551&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017200551&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／足立区（足立加平店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>東京都足立区</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17203851</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+					<span class="nes_label any">駅近（徒歩１０分以内）</span> 
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017203851&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017203851&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／足立区（足立入谷店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>東京都足立区</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17211851</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017211851&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017211851&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）江戸川区（江戸川春江店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>東京都江戸川区</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17215051</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017215051&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017215051&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／板橋区（板橋成増店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>東京都板橋区</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17218551</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+					<span class="nes_label any">駅近（徒歩１０分以内）</span> 
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017218551&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017218551&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／千葉市（花見川店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>千葉県千葉市花見川区</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17219451</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017219451&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017219451&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／市川市（市川田尻店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>千葉県市川市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17221951</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017221951&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017221951&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／船橋市（船橋夏見店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>千葉県船橋市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17222151</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017222151&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017222151&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／柏市（柏酒井根店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>千葉県柏市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17223051</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017223051&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017223051&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／柏市（柏十余二店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>千葉県柏市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17228751</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017228751&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017228751&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／野田市（野田店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>千葉県野田市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17229851</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017229851&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017229851&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／市原市（五井店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>千葉県市原市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17231051</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017231051&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017231051&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／練馬区（練馬高野台店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>東京都練馬区</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17233251</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+					<span class="nes_label any">駅近（徒歩１０分以内）</span> 
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017233251&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017233251&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／練馬区（練馬春日町店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>東京都練馬区</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>＼２０２５年２月上旬新規オープン！／<br>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17234551</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+					<span class="nes_label any">駅近（徒歩１０分以内）</span> 
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017234551&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017234551&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／草加市（草加八幡店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>埼玉県草加市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17237851</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">2</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017237851&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017237851&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）練馬区（大泉インター店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>東京都練馬区</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17242551</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017242551&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017242551&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）国立市（国立インター店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>東京都国立市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17243451</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017243451&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017243451&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／立川市（立川店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>東京都立川市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17246651</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+					<span class="nes_label any">駅近（徒歩１０分以内）</span> 
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017246651&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017246651&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／八王子市（大和田店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>東京都八王子市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17247951</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+					<span class="nes_label any">駅近（徒歩１０分以内）</span> 
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017247951&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017247951&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／八王子市（八王子店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>東京都八王子市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17249051</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017249051&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017249051&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／東久留米（東久留米店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>東京都東久留米市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17250251</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017250251&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017250251&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／川崎市（川崎競馬場店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>神奈川県川崎市川崎区</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17253751</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+					<span class="nes_label any">駅近（徒歩１０分以内）</span> 
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017253751&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017253751&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／横浜市（横浜店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>神奈川県横浜市港北区</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17255651</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017255651&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017255651&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／横浜市（横浜駒岡店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>神奈川県横浜市鶴見区</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17257151</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017257151&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017257151&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／大和市（大和店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>神奈川県大和市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17258051</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017258051&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017258051&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／厚木市（厚木金田店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>神奈川県厚木市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17260451</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017260451&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017260451&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）相模原市（相模原大沼店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>神奈川県相模原市南区</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17263651</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017263651&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017263651&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／小平市（小平小川町店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>東京都小平市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17266051</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+					<span class="nes_label any">駅近（徒歩１０分以内）</span> 
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017266051&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017266051&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／小平市（小平鈴木町店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>東京都小平市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17268251</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017268251&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017268251&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+								
+								<table class="kyujin mt1 noborder">
+
+								
+									
+
+
+
+	<tbody><tr class="kyujin_head">
+
+		<td>
+			<div class="flex last_right">
+				<div class="flex m05 fs1">
+					<table class="noborder">
+
+						<tbody><tr>
+
+							<td class="fb width4em">
+								<strong>職種</strong>
+							</td>
+							<td class="m13 fs1">
+								<div>販売スタッフ（地域限定正社員）／多摩市（多摩関戸店）等</div>
+
+							</td>
+						</tr>
+
+					</tbody></table>
+
+				</div>
+				<div class="flex_item_noshrink m05">
+					
+						
+						
+							<span class="nes_label nes">新着</span>
+
+						
+						
+						
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				受付年月日：<div class="fs13 ml01">2025年2月6日</div>
+　
+				紹介期限日：<div class="fs13 ml01">2025年4月30日</div>
+
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr class="kyujin_body">
+
+		<td>
+			<div class="flex flex_top_sa mb1">
+				<div class="left-side">
+					<table class="noborder">
+
+						<tbody><tr class="border_new">
+
+							<td class="fb in_width_9em">求人区分</td>
+							<td>
+								<div>フルタイム</div>
+
+							</td>
+						</tr>
+
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">事業所名</td>
+							<td>
+								<div>株式会社建デポ</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">就業場所</td>
+								<td>
+									<div>東京都多摩市</div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">仕事の内容</td>
+								<td>
+									<div>ホームセンターのような雰囲気のお店<br>≪職人向け建材店の接客販売スタッフ≫<br><br></div>
+
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">雇用形態</td>
+								<td>
+									<div>正社員</div>
+
+								</td>
+							</tr>
+
+						
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em va_top">賃金<div>（手当等を含む）</div>
+</td>
+								<td>
+									
+										<div class="flex">
+											<div class="disp_inline_block width15em">255,250円〜333,000円</div>
+
+										</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+
+						
+					</tbody></table>
+
+				</div>
+				<div class="right-side">
+					<table class="noborder">
+
+						
+							<tbody><tr class="border_new">
+
+								<td class="fb in_width_9em va_top">就業時間</td>
+								<td>
+									
+										<div>交替制（シフト制）</div>
+
+									
+									
+										<div class="flex">
+											（1）<div>05時40分〜14時10分</div>
+
+										</div>
+									
+									
+										<div class="flex">
+											（2）<div>12時50分〜21時20分</div>
+
+										</div>
+									
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">休日</td>
+								<td>
+									<div>他</div>
+
+									<div class="flex">
+										週休二日制：<div>毎週</div>
+
+									</div>
+									
+										<div class="flex">
+											年間休日数：<div>115日</div>
+
+										</div>
+									
+								</td>
+							</tr>
+
+						
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">年齢</td>
+								<td>
+									<div>制限あり</div>
+
+									
+										<div>〜44歳以下</div>
+
+									
+								</td>
+							</tr>
+
+						
+						<tr class="border_new">
+
+							<td class="fb in_width_9em">求人番号</td>
+							<td>
+								<div class="width16em">13010-17269551</div>
+
+							</td>
+						</tr>
+
+						
+							<tr class="border_new">
+
+								<td class="fb in_width_9em">公開範囲</td>
+								<td>
+									<div>１．事業所名等を含む求人情報を公開する</div>
+
+								</td>
+							</tr>
+
+						
+						
+					</tbody></table>
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+
+	
+		<tr>
+
+			<td>
+				<div class="flex kodawari">
+				
+					<span class="nes_label any">経験不問</span> 
+				
+				
+					<span class="nes_label any">学歴不問</span> 
+				
+				
+				
+				
+				
+				
+					<span class="nes_label any">書類選考なし</span> 
+				
+				
+					<span class="nes_label any">通勤手当あり</span> 
+				
+				
+				
+					<span class="nes_label any">マイカー通勤可</span> 
+				
+				
+					<span class="nes_label any">ＵＩＪターン歓迎</span> 
+				
+				
+				</div>
+			</td>
+		</tr>
+
+	
+	
+	<tr>
+
+		<td>
+			<div class="flex fs13">
+				
+					求人数：<div class="fs13 ml01">4</div>
+名　
+				
+				
+				
+				
+			</div>
+		</td>
+	</tr>
+
+	
+	
+									
+									<tr class="kyujin_foot">
+
+										<td>
+											<div class="flex jus_end">
+												<a id="ID_kyujinhyoBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=kyujinhyoBtn&amp;kJNo=1301017269551&amp;kJKbn=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=" target="_blank">
+													求人票を表示
+												</a>
+												<a id="ID_dispDetailBtn" class="button main" href="./GECA110010.do?screenId=GECA110010&amp;action=dispDetailBtn&amp;kJNo=1301017269551&amp;kJKbn=1&amp;jGSHNo=MwsYEhzHv3904Cc3Eafugw%3D%3D&amp;fullPart=1&amp;iNFTeikyoRiyoDtiID=&amp;kSNo=&amp;newArrived=&amp;tatZngy=1&amp;shogaiKbn=0" target="_blank">
+													詳細を表示
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody></table>
+
+							
+						<div class="flex align_end last_right mt05 ">
+<div class="mr03">
+<div class="m05"><span class="fb">5265件</span>中&nbsp;31～60&nbsp;件を表示</div></div>
+
+<div class="flex align_center"><div class="mr03">
+<span class="fb">並び順</span>
+<div class="m05"><select id="ID_fwListNaviSortBtm" name="fwListNaviSortBtm">
+<option value="1" selected="">受付年月日順</option>
+<option value="2">紹介期限日順</option>
+</select></div></div>
+<div class="mr03">
+<span class="fb">表示件数</span>
+<div class="m05"><select id="ID_fwListNaviDispBtm" name="fwListNaviDispBtm">
+<option value="10">10件</option>
+<option value="30" selected="">30件</option>
+<option value="50">50件</option>
+</select></div></div>
+</div><div><ul class="flex page_navi"><li><input type="submit" name="fwListNaviBtnPrev" value="＜前へ"></li>
+<li><input type="submit" name="fwListNaviBtn1" value="1"></li><li><input type="submit" name="fwListNaviBtn2" value="2" disabled=""></li><li><input type="submit" name="fwListNaviBtn3" value="3"></li><li><input type="submit" name="fwListNaviBtn4" value="4"></li><li><input type="submit" name="fwListNaviBtn5" value="5"></li><li><input type="submit" name="fwListNaviBtn6" value="6～"></li><li><input type="submit" name="fwListNaviBtnNext" value="次へ＞"></li>
+</ul>
+</div></div>
+<input type="hidden" name="fwListNowPage" value="2">
+<input type="hidden" name="fwListLeftPage" value="1">
+<input type="hidden" name="fwListNaviCount" value="7">
+<input type="hidden" name="fwListNaviDisp" value="30">
+<input type="hidden" name="fwListNaviSort" value="1">
+
+
+					
+					<input type="hidden" id="ID_iNFTeikyoRiyoDantaiID" name="iNFTeikyoRiyoDantaiID" value="">
+
+					<input type="hidden" id="ID_searchClear" name="searchClear" value="0">
+
+					<input type="hidden" id="ID_siku1Hidden" name="siku1Hidden" value="">
+
+					<input type="hidden" id="ID_siku2Hidden" name="siku2Hidden" value="">
+
+					<input type="hidden" id="ID_siku3Hidden" name="siku3Hidden" value="">
+
+					<input type="hidden" id="ID_kiboSuruSKSU1Hidden" name="kiboSuruSKSU1Hidden" value="">
+
+					<input type="hidden" id="ID_kiboSuruSKSU2Hidden" name="kiboSuruSKSU2Hidden" value="">
+
+					<input type="hidden" id="ID_kiboSuruSKSU3Hidden" name="kiboSuruSKSU3Hidden" value="">
+
+					<input type="hidden" id="ID_summaryDisp" name="summaryDisp" value="true">
+
+					<input type="hidden" id="ID_searchInitDisp" name="searchInitDisp" value="1">
+
+				<input type="hidden" id="ID_screenId" name="screenId" value="GECA110010">
+<input type="hidden" id="ID_action" name="action" value="">
+<input type="hidden" id="ID_codeAssistType" name="codeAssistType" value="">
+<input type="hidden" id="ID_codeAssistKind" name="codeAssistKind" value="">
+<input type="hidden" id="ID_codeAssistCode" name="codeAssistCode" value="">
+<input type="hidden" id="ID_codeAssistItemCode" name="codeAssistItemCode" value="">
+<input type="hidden" id="ID_codeAssistItemName" name="codeAssistItemName" value="">
+<input type="hidden" id="ID_codeAssistDivide" name="codeAssistDivide" value="">
+<input type="hidden" id="ID_maba_vrbs" name="maba_vrbs" value="infTkRiyoDantaiBtn,searchShosaiBtn,searchBtn,searchNoBtn,searchClearBtn,dispDetailBtn,kyujinhyoBtn">
+<input type="hidden" id="ID_preCheckFlg" name="preCheckFlg" value="false">
+</form>
+
+			</div>
+
+			
+			
+<footer>
+	<p class="pagetop" style="display: block;"><a href="#all"><i class="fa fa-2x fa-chevron-up"></i><br>ページ<br>最上部へ</a></p>
+	<hr>
+	<div class="footer_navi">
+		<p class="m_side_auto">
+			｜
+			<a href="https://www.hellowork.mhlw.go.jp/info/link.html">リンク集</a>
+			｜
+			<a href="https://www.hellowork.mhlw.go.jp/info/sitemap.html">サイトマップ</a>
+			｜
+			<a href="https://www.hellowork.mhlw.go.jp/info/sitepolicy.html">サイトポリシー</a>
+			｜
+			<a href="https://www.hellowork.mhlw.go.jp/info/privacypolicy.html">プライバシーポリシー</a>
+			｜
+			<a href="https://www.hellowork.mhlw.go.jp/info/terms.html">利用規約</a>
+			｜
+			<a href="https://www.hellowork.mhlw.go.jp/help/question.html">よくあるご質問</a>
+			｜
+			<a href="https://www.hellowork.mhlw.go.jp/info/contact.html">お問い合わせ先</a>
+			｜
+			<a href="https://www.hellowork.mhlw.go.jp/info/location_list.html">所在地情報</a>
+			｜
+		</p>
+		<p class="m_side_auto footer_copyright" id="bottom">All rights reserved, Copyright (C) Employment Security Bureau,Ministry of Health, Labour and Welfare</p>
+	</div>
+</footer>
+			
+		</div>
+<script src="jsp/js/jquery/jquery-3.6.3.min.js"></script>
+<script src="jsp/js/jquery/jquery-ui.js"></script>
+<script src="jsp/js/common.js"></script>
+<script src="jsp/js/AssistCode.js"></script>
+
+
+		<script src="jsp/js/ECA110/ECA110.js"></script>
+
+	
+
+
+
+</body></html>
